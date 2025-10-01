@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - AmirAli</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc, #ff99cc);
+      background-size: 300% 300%;
+      animation: gradientMove 12s ease infinite;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .form-container {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      width: 320px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      color: white;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff7eb3, #65c7f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .form-container input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-container input::placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .form-container input:focus {
+      background: rgba(255,255,255,0.35);
+      transform: scale(1.03);
+    }
+
+    .form-container button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #65c7f7, #ff7eb3);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form-container button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container" id="loginForm">
+    <h2>amirali jahanshahi project</h2>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="confirm" placeholder="Confirm Password" required>
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // جلوگیری از ارسال فرم به سرور
+      // بعد از ریجستر یا لاگین موفق (فعلاً بدون بررسی) ریدایرکت میشه:
+      window.location.href = "main.html"; // اسم صفحه‌ اصلی‌تو اینجا بذار
+    });
+  </script>
+</body>
+</html>
+<a href="main.html">ورود / ثبت نام</a>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیر علی جهانشاهی - ورزشکار کلستنیکس</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazir', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .hero h2 {
+            font-size: 1.8em;
+            color: #f8f9fa;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: white;
+            animation: pulse 2s infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .section h3 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .exercise {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .exercise:hover {
+            transform: scale(1.05);
+        }
+        
+        .exercise-name {
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+        
+        .exercise-reps {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .skill {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill:hover {
+            transform: scale(1.1);
+        }
+        
+        .about-text {
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #555;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        
+        .contact h3 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .social-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-5px);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            to {
+                text-shadow: 2px 2px 20px rgba(255,255,255,0.5);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero h2 {
+                font-size: 1.3em;
+            }
+            
+            .sections {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>امیر علی جهانشاهی</h1>
+            <h2>ورزشکار کلستنیکس و تناسب اندام</h2>
+            <div class="profile-img">AA</div>
+            <p style="color: #f8f9fa; font-size: 1.2em; margin-top: 20px;">
+                قدرت واقعی از درون می‌آید
+            </p>
+        </div>
+        
+        <div class="sections">
+            <div class="section">
+                <h3>درباره من</h3>
+                <div class="about-text">
+                    سلام! من امیر علی جهانشاهی هستم، ورزشکار کلستنیکس با یک سال تجربه در این رشته. 
+                    کلستنیکس برای من فقط یک ورزش نیست، بلکه سبک زندگی است. من معتقدم که بدن انسان بهترین 
+                    وزنه‌ای است که می‌تواند داشته باشد و با تمرینات مناسب می‌توان به قدرت و تعادل فوق‌العاده‌ای رسید.
+                    <br><br>
+                    هدف من کمک به دیگران برای دستیابی به سطح بالای آمادگی جسمانی و روحی از طریق تمرینات کلستنیکس است.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>مهارت‌های من</h3>
+                <div class="skills">
+                    <div class="skill">Human Flag</div>
+                    <div class="skill">Muscle Up</div>
+                    <div class="skill">Planche</div>
+                    <div class="skill">Front Lever</div>
+                    <div class="skill">Handstand</div>
+                    <div class="skill">One Arm Pull-up</div>
+                    <div class="skill">Pistol Squat</div>
+                    <div class="skill">Dragon Flag</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>رزومه تمرینی روزانه</h3>
+                <div class="exercise">
+                    <span class="exercise-name">Pull-ups</span>
+                    <span class="exercise-reps">5 ست × 15 تکرار</span>
+                </div>
+                <div class="exercise">
+                    <span class="exercise-name">Push-ups</span>
+                    <span class="exercise-reps">5 ست × 20 تکرار</span>
+                </div>
+                <div class="exercise">
+                    <span class="exercise-name">Dips</span>
+                    <span class="exercise-reps">4 ست × 12 تکرار</span>
+                </div>
+                <div class="exercise">
+                    <span class="exercise-name">Squats</span>
+                    <span class="exercise-reps">4 ست × 25 تکرار</span>
+                </div>
+                <div class="exercise">
+                    <span class="exercise-name">Plank</span>
+                    <span class="exercise-reps">3 ست × 60 ثانیه</span>
+                </div>
+                <div class="exercise">
+                    <span class="exercise-name">Burpees</span>
+                    <span class="exercise-reps">3 ست × 10 تکرار</span>
+                </div>
+                <div class="exercise">
+                    <span class="exercise-name">Handstand Practice</span>
+                    <span class="exercise-reps">15 دقیقه</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>اهداف تمرینی</h3>
+                <div class="about-text">
+                    <strong>هدف کوتاه مدت:</strong><br>
+                    • تسلط کامل بر حرکت One Arm Handstand<br>
+                    • افزایش تحمل در حرکت Human Flag به 30 ثانیه<br>
+                    • یادگیری حرکت Hefesto<br><br>
+                    
+                    <strong>هدف بلند مدت:</strong><br>
+                    • شرکت در مسابقات ملی کلستنیکس<br>
+                    • تاسیس آکادمی تخصصی کلستنیکس<br>
+                    • تولید محتوای آموزشی برای علاقه‌مندان
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h3>ارتباط با من</h3>
+            <p style="color: #f8f9fa; font-size: 1.1em;">
+                آماده کمک و راهنمایی در مسیر کلستنیکس هستم
+            </p>
+            <div class="social-links">
+                <a href="tel:09361630100" class="social-link">📞 ۰۹۳۶۱۶۳۰۱۰۰</a>
+                <a href="mailto:amiralijahanshahi74@gmail.com" class="social-link">📧 ایمیل</a>
+                <a href="https://instagram.com/theamirali_7" target="_blank" class="social-link">📱 اینستاگرام</a>
+                <a href="https://t.me/theamirali_7" target="_blank" class="social-link">✈️ تلگرام</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© ۲۰۲۵ امیر علی جهانشاهی - من زن دارم ر - تمام حقوق محفوظ است</p>
+            <p style="margin-top: 10px; font-style: italic;">
+                "موفقیت حاصل تمرین مداوم و پشتکار است"
+            </p>
+        </div>
+    </div>
+</body>
+</html><main><header></header></main>
